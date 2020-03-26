@@ -1,0 +1,13 @@
+<div class="chart-container">
+    <h2 fxLayoutAlign="center center"> {{ charTitle }} </h2>
+    <!-- For the chart -->
+    <div>
+        <div>
+            <div>
+                <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend"
+                    [chartType]="polarAreaChartType" [colors]="polarAreaChartColors">
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>

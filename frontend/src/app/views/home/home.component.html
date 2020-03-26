@@ -1,0 +1,21 @@
+<div fxLayout="column" class="container">
+
+  <nav fxFlex="10%" fxLayoutAlign="center center" class="home-nav">
+    Covid-19 in the world
+  </nav>
+
+  <div fxLayout="row" fxFlex="90%">
+    <div fxFlex="40%" fxLayout="column">
+      <h2 fxLayoutAlign="center center"> Countries list </h2>
+      <div class="scroll" fxLayoutGap="5%" fxLayout="column">
+        <app-country-card *ngFor="let country of countriesArray" [country]="country" (cardCountry)="actual = $event">
+        </app-country-card>
+      </div>
+    </div>
+
+    <div fxFlex="60%">
+      <app-country-chart [actualCountry]="actual"></app-country-chart>
+    </div>
+
+  </div>
+</div>
